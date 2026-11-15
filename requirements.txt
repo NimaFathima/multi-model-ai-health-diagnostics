@@ -1,0 +1,12 @@
+# Core
+pytesseract
+pdf2image
+Pillow
+pandas
+numpy
+
+# API
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
