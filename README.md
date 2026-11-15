@@ -47,7 +47,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the module-by-module breakd
 - **Pattern detection** across parameters, not just single values.
 - **Risk scoring** with cardiovascular, diabetes and kidney components.
 - **Knowledge-base recommendations** (JSON) with a safety layer that always attaches a medical disclaimer.
-- **Evaluation framework** that compares pipeline output with ground-truth annotations.
+- **Evaluation framework** that re-runs the pipeline over a set of test reports and compares it with stored label files.
 
 ## Tech stack
 
@@ -71,7 +71,7 @@ api/                FastAPI backend (upload -> process -> fetch report)
 blood-report-ui/    React dashboard
 config/             configuration
 evaluation/         evaluation framework and results
-docs/               architecture, evaluation write-up, data notes
+docs/               architecture, evaluation write-up, data notes, phase notes
 ```
 
 ## Getting started
@@ -116,31 +116,31 @@ The raw NHANES CSVs are large and are **not** stored in this repo. Download them
 
 ## Evaluation
 
-The evaluation framework runs the pipeline on a set of 17 de-identified-style test reports (13 PDF, 4 PNG) and compares the output with ground-truth annotations.
+The evaluation framework runs the pipeline on 17 test reports (13 PDF, 4 PNG) and compares its classifications with stored label files.
 
 | Metric | Result |
 |---|---|
-| Reports evaluated | 17 |
+| Reports | 17 |
 | Parameters compared | 203 |
-| Classification agreement with annotations | 199 / 203 (**98.03%**) |
-| Disagreements | 4, all where the annotation was "Unknown" (no reference range available) |
+| Agreement with stored labels | 199 / 203 (98.03%) |
+| Disagreements | 4, all where the label was "Unknown" (no reference range available) |
 
-**How to read this number:** the annotations were produced with the helper script `create_ground_truth_annotations.py` in this project, so this is a *consistency / regression check of the pipeline against its own annotation set*, not an independent clinical validation. A proper validation would need labels made by hand or by a clinician on a separate set of reports. Details are in [docs/EVALUATION.md](docs/EVALUATION.md). The test reports themselves are real patient documents and are not published.
+**Please read this number carefully.** The label files were generated from the pipeline's own extraction output and were **not hand-verified**, so 98.03% shows the classifier is self-consistent, not that it is 98% accurate against independent truth. OCR/parsing mistakes in the labels (for example a wrong unit) are copied through. A proper evaluation needs hand-checked labels on a held-out set; the steps are in [docs/EVALUATION.md](docs/EVALUATION.md). The test reports are real patient documents and are not published.
 
 ## Limitations (honest status)
 
 - Report storage in the API is **in-memory**; restarting the server clears it. No database is wired in even though `.env.example` lists PostgreSQL/Redis placeholders for future work.
 - If a report has no readable age/sex, the API falls back to default values, which can change which reference range applies.
 - Patient name/ID in API responses are placeholders; the export endpoint is a stub.
-- OCR accuracy depends on scan quality; heavily formatted or low-resolution reports can lose parameters.
+- OCR accuracy depends on scan quality; heavily formatted or low-resolution reports can lose or mislabel parameters (units are the weakest point).
 - Not clinically validated. Recommendations are generic guidance from a JSON knowledge base.
 
 ## Roadmap
 
+- Hand-verified, held-out evaluation set
 - Persistent storage and user accounts
-- Independent, hand-verified evaluation set
 - Real PDF export of the analysed report
-- Broader parameter coverage and unit conversion
+- Better unit detection and conversion; broader parameter coverage
 
 ## Author
 
