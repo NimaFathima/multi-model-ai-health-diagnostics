@@ -1,0 +1,105 @@
+{
+  "patient_info": {
+    "name": "John Doe",
+    "age": 45,
+    "sex": "male",
+    "gender": "male",
+    "report_date": "2026-01-05",
+    "known_conditions": [
+      "diabetes",
+      "hypertension"
+    ],
+    "lifestyle": {
+      "smoker": true,
+      "exercise_level": "low",
+      "diet_type": "mixed",
+      "alcohol_use": "moderate"
+    }
+  },
+  "parameters": [
+    {
+      "name": "Hemoglobin",
+      "value": 14.5,
+      "unit": "g/dL",
+      "reference_min": 13.5,
+      "reference_max": 17.5
+    },
+    {
+      "name": "RBC",
+      "value": 5.2,
+      "unit": "million cells/μL",
+      "reference_min": 4.7,
+      "reference_max": 6.1
+    },
+    {
+      "name": "WBC",
+      "value": 7500,
+      "unit": "cells/μL",
+      "reference_min": 4000,
+      "reference_max": 11000
+    },
+    {
+      "name": "Platelets",
+      "value": 250000,
+      "unit": "cells/μL",
+      "reference_min": 150000,
+      "reference_max": 400000
+    },
+    {
+      "name": "Glucose",
+      "value": 135,
+      "unit": "mg/dL",
+      "reference_min": 70,
+      "reference_max": 100
+    },
+    {
+      "name": "Creatinine",
+      "value": 1.1,
+      "unit": "mg/dL",
+      "reference_min": 0.7,
+      "reference_max": 1.3
+    },
+    {
+      "name": "Total Cholesterol",
+      "value": 220,
+      "unit": "mg/dL",
+      "reference_min": 125,
+      "reference_max": 200
+    },
+    {
+      "name": "HDL",
+      "value": 45,
+      "unit": "mg/dL",
+      "reference_min": 40,
+      "reference_max": 100
+    },
+    {
+      "name": "LDL",
+      "value": 145,
+      "unit": "mg/dL",
+      "reference_min": 50,
+      "reference_max": 100
+    },
+    {
+      "name": "Triglycerides",
+      "value": 180,
+      "unit": "mg/dL",
+      "reference_min": 50,
+      "reference_max": 150
+    },
+    {
+      "name": "ALT",
+      "value": 32,
+      "unit": "U/L",
+      "reference_min": 7,
+      "reference_max": 56
+    },
+    {
+      "name": "AST",
+      "value": 28,
+      "unit": "U/L",
+      "reference_min": 10,
+      "reference_max": 40
+    }
+  ]
+}

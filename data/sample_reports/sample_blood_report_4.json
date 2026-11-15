@@ -1,0 +1,74 @@
+{
+  "report_id": "TC004_CKD_CRITICAL",
+  "patient_info": {
+    "patient_id": "P004",
+    "name": "Margaret Johnson",
+    "age": 72,
+    "gender": "Female",
+    "sex": "female",
+    "height": "162 cm",
+    "weight": "67 kg",
+    "bmi": 25.5,
+    "known_conditions": ["chronic_kidney_disease", "hypertension", "diabetes"],
+    "lifestyle": {
+      "smoker": false,
+      "exercise_level": "limited",
+      "diet_type": "low_sodium",
+      "alcohol_use": "none"
+    }
+  },
+  "test_date": "2026-02-08",
+  "lab_name": "Regional Medical Center Lab",
+  "parameters": [
+    {
+      "name": "Creatinine",
+      "value": 3.8,
+      "unit": "mg/dL",
+      "reference_range": {"min": 0.6, "max": 1.2}
+    },
+    {
+      "name": "BUN",
+      "value": 68,
+      "unit": "mg/dL",
+      "reference_range": {"min": 7, "max": 20}
+    },
+    {
+      "name": "Potassium",
+      "value": 5.9,
+      "unit": "mEq/L",
+      "reference_range": {"min": 3.5, "max": 5.0}
+    },
+    {
+      "name": "Sodium",
+      "value": 132,
+      "unit": "mEq/L",
+      "reference_range": {"min": 136, "max": 145}
+    },
+    {
+      "name": "Hemoglobin",
+      "value": 9.2,
+      "unit": "g/dL",
+      "reference_range": {"min": 12.0, "max": 15.5}
+    },
+    {
+      "name": "Glucose",
+      "value": 185,
+      "unit": "mg/dL",
+      "reference_range": {"min": 70, "max": 100}
+    },
+    {
+      "name": "Albumin",
+      "value": 2.9,
+      "unit": "g/dL",
+      "reference_range": {"min": 3.5, "max": 5.0}
+    }
+  ],
+  "clinical_notes": "72-year-old female with long-standing CKD, now presenting with severely elevated creatinine (3.8) and BUN (68). Critical hyperkalemia (5.9) requiring urgent intervention. Significant anemia (Hgb 9.2) consistent with CKD. Uncontrolled diabetes with glucose 185. Patient on multiple medications including ACE inhibitors, diuretics, insulin. Nephrology consultation recommended.",
+  "ordering_physician": "Dr. James Chen, Nephrologist",
+  "report_status": "Final - CRITICAL VALUES CALLED",
+  "critical_flags": [
+    "Potassium 5.9 mEq/L (CRITICAL HIGH)",
+    "Creatinine 3.8 mg/dL (SEVERE ELEVATION)",
+    "Hemoglobin 9.2 g/dL (SEVERE ANEMIA)"
+  ]
+}

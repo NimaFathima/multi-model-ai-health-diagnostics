@@ -1,0 +1,81 @@
+{
+  "report_id": "TC003_METABOLIC_SYNDROME",
+  "patient_info": {
+    "patient_id": "P003",
+    "name": "Robert Miller",
+    "age": 58,
+    "gender": "Male",
+    "sex": "male",
+    "height": "175 cm",
+    "weight": "102 kg",
+    "bmi": 33.3,
+    "known_conditions": ["prediabetes", "obesity"],
+    "lifestyle": {
+      "smoker": false,
+      "exercise_level": "sedentary",
+      "diet_type": "high_carb",
+      "alcohol_use": "moderate"
+    }
+  },
+  "test_date": "2026-02-05",
+  "lab_name": "Metropolitan Diagnostics",
+  "parameters": [
+    {
+      "name": "Glucose",
+      "value": 105,
+      "unit": "mg/dL",
+      "reference_range": {"min": 70, "max": 100}
+    },
+    {
+      "name": "HbA1c",
+      "value": 6.2,
+      "unit": "%",
+      "reference_range": {"min": 4.0, "max": 5.6}
+    },
+    {
+      "name": "Total Cholesterol",
+      "value": 205,
+      "unit": "mg/dL",
+      "reference_range": {"min": 125, "max": 200}
+    },
+    {
+      "name": "LDL",
+      "value": 135,
+      "unit": "mg/dL",
+      "reference_range": {"min": 0, "max": 100}
+    },
+    {
+      "name": "HDL",
+      "value": 38,
+      "unit": "mg/dL",
+      "reference_range": {"min": 40, "max": 60}
+    },
+    {
+      "name": "Triglycerides",
+      "value": 175,
+      "unit": "mg/dL",
+      "reference_range": {"min": 0, "max": 150}
+    },
+    {
+      "name": "ALT",
+      "value": 48,
+      "unit": "U/L",
+      "reference_range": {"min": 7, "max": 45}
+    },
+    {
+      "name": "AST",
+      "value": 42,
+      "unit": "U/L",
+      "reference_range": {"min": 10, "max": 40}
+    },
+    {
+      "name": "Total Bilirubin",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "reference_range": {"min": 0.1, "max": 1.2}
+    }
+  ],
+  "clinical_notes": "58-year-old male with obesity (BMI 33.3), sedentary lifestyle. Multiple borderline metabolic parameters suggest metabolic syndrome. Patient reports high-carbohydrate diet, moderate alcohol intake. No current diabetes diagnosis but prediabetic markers present.",
+  "ordering_physician": "Dr. Lisa Anderson",
+  "report_status": "Final"
+}

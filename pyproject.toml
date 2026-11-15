@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "health-diagnostics-ai"
+version = "0.1.0"
+description = "Multi-Model AI Agent for Automated Health Diagnostics"
+authors = ["NIMA FATHIMA"]
+status= "Phase 1 OCR pipeline for automated health diagnostics"
+requires-python = ">=3.9"
+
+dependencies = [
+    "pytesseract",
+    "pdf2image",
+    "Pillow",
+]

@@ -1,0 +1,88 @@
+{
+  "patient_info": {
+    "name": "Jane Smith",
+    "age": 32,
+    "sex": "female",
+    "gender": "female",
+    "report_date": "2026-01-04",
+    "known_conditions": [],
+    "lifestyle": {
+      "smoker": false,
+      "exercise_level": "moderate",
+      "diet_type": "vegetarian",
+      "alcohol_use": "none"
+    }
+  },
+  "parameters": [
+    {
+      "name": "Hemoglobin",
+      "value": 11.5,
+      "unit": "g/dL",
+      "reference_min": 12.0,
+      "reference_max": 15.5
+    },
+    {
+      "name": "RBC",
+      "value": 4.0,
+      "unit": "million cells/μL",
+      "reference_min": 4.2,
+      "reference_max": 5.4
+    },
+    {
+      "name": "WBC",
+      "value": 6200,
+      "unit": "cells/μL",
+      "reference_min": 4000,
+      "reference_max": 11000
+    },
+    {
+      "name": "Platelets",
+      "value": 220000,
+      "unit": "cells/μL",
+      "reference_min": 150000,
+      "reference_max": 400000
+    },
+    {
+      "name": "Glucose",
+      "value": 88,
+      "unit": "mg/dL",
+      "reference_min": 70,
+      "reference_max": 100
+    },
+    {
+      "name": "Total Cholesterol",
+      "value": 185,
+      "unit": "mg/dL",
+      "reference_min": 125,
+      "reference_max": 200
+    },
+    {
+      "name": "HDL",
+      "value": 62,
+      "unit": "mg/dL",
+      "reference_min": 50,
+      "reference_max": 100
+    },
+    {
+      "name": "LDL",
+      "value": 98,
+      "unit": "mg/dL",
+      "reference_min": 50,
+      "reference_max": 100
+    },
+    {
+      "name": "Triglycerides",
+      "value": 125,
+      "unit": "mg/dL",
+      "reference_min": 50,
+      "reference_max": 150
+    },
+    {
+      "name": "TSH",
+      "value": 3.2,
+      "unit": "mIU/L",
+      "reference_min": 0.4,
+      "reference_max": 4.0
+    }
+  ]
+}
